@@ -7,7 +7,7 @@ int distance;
 long duration;
 int pos;
 
-Servo myservo;
+Servo myservo; // define servo
 void setup() 
 {
 
@@ -18,7 +18,7 @@ myservo.attach(servo);
 myservo.write(0);
 Serial.begin(9600);
 }
-void Sanitizer(){
+void Sanitizer(){ // servo controlling part
   Serial.print("Servo is moving");
   for (int i=0;i<4;i++)
   {
@@ -54,7 +54,7 @@ Serial.println(distance);
 
 //Servo job 
 //cm
-if(distance<1)
+if(distance<1) // if hand detect set work sanitaizer 
 { 
   Sanitizer();
 }
